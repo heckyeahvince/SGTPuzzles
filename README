@@ -1,26 +1,4 @@
 # Simon Tatham's Puzzle Collection
-
-
-## TO SUBMIT:
-
-https://classroom.github.com/assignment-invitations/56b9ecfab3fef084bb4136251183f614
-
-## Submission Procedure with Git: 
-
-```shell
-$ cd /path/to/your/android/app/
-$ git init
-$ git add –all
-$ git commit -m "your message, e.x. Assignment 1 submission"
-$ git remote add origin <Assignment link copied from assignment github, e.x. https://github.com/DeLaSalleUniversity-Manila/secondactivityassignment-melvincabatuan.git>
-$ git push -u origin master
-<then Enter Username and Password>
-```
- 
-##Videocapture:
------------
-
- https://youtu.be/mq3est67X9w
  
 ##Build/Install
  
