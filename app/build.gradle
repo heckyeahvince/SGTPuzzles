@@ -1,0 +1,153 @@
+import org.apache.tools.ant.taskdefs.condition.Os
+import com.google.common.base.Joiner
+
+import java.text.SimpleDateFormat
+
+apply plugin: 'com.android.application'
+
+def ndkDir = project.plugins.findPlugin('android').sdkHandler.ndkFolder
+
+def timestamp() {
+    def dateFormat = new SimpleDateFormat("yyyy-MM-dd-HHmm")
+    dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"))
+    return dateFormat.format(new Date())
+}
+
+def idForSimon() {
+    try {
+        def commit = new ByteArrayOutputStream()
+        exec {
+            // Require remote called simon because someone downstream might call my branch "upstream"
+            commandLine 'git', 'merge-base', 'simon/master', 'master'
+            standardOutput = commit
+        }
+        def shortUnique = new ByteArrayOutputStream()
+        exec {
+            commandLine 'git', 'rev-parse', '--short', commit.toString().trim()
+            standardOutput = shortUnique
+        }
+        return shortUnique.toString().trim()
+    } catch (ignored) {
+        return "UNOFFICIAL"
+    }
+}
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "name.boyle.chris.sgtpuzzles"
+        versionCode 110
+        versionName "${timestamp()}-${idForSimon()}"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        minSdkVersion 7
+        targetSdkVersion 23
+
+        ndk {
+            moduleName "puzzles"
+            cFlags "-DANDROID -DSMALL_SCREEN -DSTYLUS_BASED -DNO_PRINTING -DCOMBINED -DVIVID_COLOURS"
+            // WARNING abiFilters "all" here can end up omitting lib dir; I don't know why
+        }
+        fileTree(dir: 'src/main/jni', include: '*.c').each {File f ->
+            def game = f.name.replace(".c", "")
+            def text = f.text
+            def match = text =~ /enum\s+\{\s*COL_[^,]+,\s*(COL_[^\}]+)\}/
+            if (match) {
+                def colours = match.group(1).replaceAll(/(?s)\/\*.*?\*\//, "").replaceAll(/#[^\n]*\n/, "")
+                        .trim().split(",")*.trim()*.replaceFirst(/^COL_/, "")*.toLowerCase()
+                        .findAll { it =~ /^[^=]+$/ } - ["ncolours", "crossedline"]
+                if (colours.any { it =~ /[^a-z0-9_]/ }) {
+                    throw new GradleException("Couldn't parse colours for " + game + ": " + match.group(1) + " -> " + colours)
+                }
+                resValue "string", game + "_colours", colours.join(',')
+            }
+        }
+    }
+
+    buildTypes {
+        debug {
+            jniDebuggable true
+        }
+        release {
+            minifyEnabled true  // about to be renamed to minifyEnabled
+            jniDebuggable false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+android.applicationVariants.all{ variant ->
+
+    variant.ndkCompile << {
+        // library is built, now build the executables: copy libpuzzles aside...
+        def prebuiltDir = file(variant.ndkCompile.soFolder.parent + '/prebuilt')
+        copy {
+            from(variant.ndkCompile.soFolder) {
+                include '**/libpuzzles.so'
+            }
+            into prebuiltDir
+        }
+
+        // use the same APP_ABI that NdkCompile.groovy does
+        String abiParam = 'APP_ABI='
+        Set<String> abiFilters = variant.ndkCompile.abiFilters
+        if (abiFilters != null && !abiFilters.isEmpty()) {
+            if (abiFilters.size() == 1) {
+                abiParam += abiFilters.iterator().next()
+            } else {
+                abiParam += Joiner.on((char)',').skipNulls().join(abiFilters.iterator())
+            }
+        } else {
+            abiParam += 'all'
+        }
+
+        // build the executables, with and without PIE
+        //noinspection GroovyAssignabilityCheck
+        def common = [
+            ndkDir.absolutePath + (Os.isFamily(Os.FAMILY_WINDOWS) ? '/ndk-build.cmd' : '/ndk-build'),
+            'NDK_PROJECT_PATH=null',
+            'APP_BUILD_SCRIPT=' + file('src/main/executable.mk').absolutePath,
+            'NDK_OUT=' + variant.ndkCompile.objFolder.absolutePath,
+            'NDK_LIBS_OUT=' + variant.ndkCompile.soFolder.absolutePath,
+            'PUZZLES_PREBUILT_DIR=' + prebuiltDir.absolutePath,
+            abiParam,
+            'NDK_LOG=1',
+            'NDK_DEBUG=' + (variant.ndkCompile.debuggable ? '1' : '0')]
+        exec {
+            commandLine common + [
+                    'APP_PLATFORM=android-9',  // 9 is earliest for x86 + mips
+                    'PUZZLESGEN_SUFFIX=-no-pie',
+                    'APP_PIE=false']
+        }
+        exec {
+            commandLine common + [
+                    'APP_PLATFORM=android-16',  // earliest for PIE
+                    'PUZZLESGEN_SUFFIX=-with-pie',
+                    'APP_PIE=true']
+        }
+
+        // rename to look like libraries, to get them installed
+        copy {
+            from(variant.ndkCompile.soFolder) {
+                include '**/puzzlesgen-*'
+                rename 'puzzlesgen-(.*)', 'libpuzzlesgen-$1.so'
+            }
+            into variant.ndkCompile.soFolder
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:23.1.0'
+    compile 'com.android.support:appcompat-v7:23.1.0'
+    compile 'com.android.support:gridlayout-v7:23.1.0'
+    compile 'com.android.support:support-annotations:23.1.0'
+    androidTestCompile 'com.android.support:support-annotations:23.1.0'
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.mockito:mockito-core:1.10.19'
+    //testCompile 'org.hamcrest:hamcrest-library:1.1'
+    androidTestCompile 'com.android.support.test:runner:0.4'
+    androidTestCompile 'com.android.support.test:rules:0.4'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.1'
+}

@@ -1,0 +1,554 @@
+# Simon Tatham's Puzzle Collection
+
+
+## TO SUBMIT:
+
+https://classroom.github.com/assignment-invitations/56b9ecfab3fef084bb4136251183f614
+
+## Submission Procedure with Git: 
+
+```shell
+$ cd /path/to/your/android/app/
+$ git init
+$ git add –all
+$ git commit -m "your message, e.x. Assignment 1 submission"
+$ git remote add origin <Assignment link copied from assignment github, e.x. https://github.com/DeLaSalleUniversity-Manila/secondactivityassignment-melvincabatuan.git>
+$ git push -u origin master
+<then Enter Username and Password>
+```
+ 
+##Videocapture:
+-----------
+
+ https://youtu.be/mq3est67X9w
+ 
+##Build/Install
+ 
+ ```shell
+$ ./gradlew installDebug
+fatal: Not a valid object name simon/master
+:app:preBuild UP-TO-DATE
+:app:preDebugBuild UP-TO-DATE
+:app:checkDebugManifest
+:app:preReleaseBuild UP-TO-DATE
+:app:prepareComAndroidSupportAppcompatV72310Library
+:app:prepareComAndroidSupportGridlayoutV72310Library
+:app:prepareComAndroidSupportSupportV42310Library
+:app:prepareDebugDependencies
+:app:compileDebugAidl
+:app:compileDebugRenderscript
+:app:generateDebugBuildConfig
+:app:generateDebugAssets UP-TO-DATE
+:app:mergeDebugAssets
+:app:generateDebugResValues
+:app:generateDebugResources
+:app:mergeDebugResources
+:app:processDebugManifest
+:app:processDebugResources
+:app:generateDebugSources
+:app:processDebugJavaRes UP-TO-DATE
+:app:compileDebugJavaWithJavac
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+:app:compileDebugNdk
+/home/cobalt/AndroidStudioProjects/sgtpuzzles/app/src/main/jni/android.c:20 : (Unknown) In file included
+Unknown source file : /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/src/main/jni/android.c: In function 'Java_name_boyle_chris_sgtpuzzles_GameView_suggestDensity':
+/home/cobalt/AndroidStudioProjects/sgtpuzzles/app/src/main/jni/android.c:328:22 : incompatible implicit declaration of built-in function 'floor'
+/home/cobalt/AndroidStudioProjects/sgtpuzzles/app/src/main/jni/puzzles.h:45:25 : in definition of macro 'max'
+/home/cobalt/AndroidStudioProjects/sgtpuzzles/app/src/main/jni/android.c:328:18 : in expansion of macro 'min'
+Unknown source file : /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/src/main/jni/android.c: In function 'Java_name_boyle_chris_sgtpuzzles_GameView_suggestDensity':
+Unknown source file : /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/src/main/jni/android.c: In function 'Java_name_boyle_chris_sgtpuzzles_GameView_suggestDensity':
+Unknown source file : /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/src/main/jni/android.c: In function 'Java_name_boyle_chris_sgtpuzzles_GameView_suggestDensity':
+/home/cobalt/AndroidStudioProjects/sgtpuzzles/app/src/main/jni/android.c:328:22 : incompatible implicit declaration of built-in function 'floor' [enabled by default]
+Unknown source file : /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/src/main/jni/android.c: In function 'Java_name_boyle_chris_sgtpuzzles_GameView_suggestDensity':
+Unknown source file : /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/src/main/jni/android.c: In function 'Java_name_boyle_chris_sgtpuzzles_GameView_suggestDensity':
+Unknown source file : /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/src/main/jni/android.c: In function 'Java_name_boyle_chris_sgtpuzzles_GameView_suggestDensity':
+
+HOST_OS=linux
+HOST_ARCH=x86
+HOST_TAG=linux-x86 
+GNUMAKE=/home/cobalt/Android/Sdk/ndk-bundle/prebuilt/linux-x86/bin/make (NDK prebuilt)
+Android NDK: NDK installation path auto-detected: '/home/cobalt/Android/Sdk/ndk-bundle'
+Android NDK: GNU Make version 3.81 detected
+Android NDK: Host OS was auto-detected: linux
+Android NDK:  Host operating system detected: linux
+Android NDK: Host CPU was auto-detected: x86
+Android NDK: HOST_TAG set to linux-x86
+Android NDK: Host tools prebuilt directory: /home/cobalt/Android/Sdk/ndk-bundle/prebuilt/linux-x86/bin
+Android NDK: Host 'echo' tool: echo
+Android NDK: Host 'echo -n' tool: printf %s
+Android NDK: Host 'cmp' tool: cmp
+Android NDK: Host 'awk' tool: /home/cobalt/Android/Sdk/ndk-bundle/prebuilt/linux-x86/bin/awk
+Android NDK: Host 'awk' test returned: Pass
+Android NDK: Found platform root directory: /home/cobalt/Android/Sdk/ndk-bundle/platforms
+Android NDK: Found supported platforms: android-12 android-13 android-14 android-15 android-16 android-17 android-18 android-19 android-21 android-3 android-4 android-5 android-8 android-9
+Android NDK: PLATFORM android-12 supports: arm mips x86
+Android NDK:   ABI arm sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-12/arch-arm
+Android NDK:   ABI mips sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-12/arch-mips
+Android NDK:   ABI x86 sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-12/arch-x86
+Android NDK: PLATFORM android-13 supports: arm mips x86
+Android NDK:   ABI arm sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-13/arch-arm
+Android NDK:   ABI mips sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-13/arch-mips
+Android NDK:   ABI x86 sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-13/arch-x86
+Android NDK: PLATFORM android-14 supports: arm mips x86
+Android NDK:   ABI arm sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-14/arch-arm
+Android NDK:   ABI mips sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-14/arch-mips
+Android NDK:   ABI x86 sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-14/arch-x86
+Android NDK: PLATFORM android-15 supports: arm mips x86
+Android NDK:   ABI arm sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-15/arch-arm
+Android NDK:   ABI mips sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-15/arch-mips
+Android NDK:   ABI x86 sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-15/arch-x86
+Android NDK: PLATFORM android-16 supports: arm mips x86
+Android NDK:   ABI arm sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-16/arch-arm
+Android NDK:   ABI mips sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-16/arch-mips
+Android NDK:   ABI x86 sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-16/arch-x86
+Android NDK: PLATFORM android-17 supports: arm mips x86
+Android NDK:   ABI arm sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-17/arch-arm
+Android NDK:   ABI mips sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-17/arch-mips
+Android NDK:   ABI x86 sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-17/arch-x86
+Android NDK: PLATFORM android-18 supports: arm mips x86
+Android NDK:   ABI arm sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-18/arch-arm
+Android NDK:   ABI mips sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-18/arch-mips
+Android NDK:   ABI x86 sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-18/arch-x86
+Android NDK: PLATFORM android-19 supports: arm mips x86
+Android NDK:   ABI arm sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-19/arch-arm
+Android NDK:   ABI mips sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-19/arch-mips
+Android NDK:   ABI x86 sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-19/arch-x86
+Android NDK: PLATFORM android-21 supports: arm arm64 mips mips64 x86 x86_64
+Android NDK:   ABI arm sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-21/arch-arm
+Android NDK:   ABI arm64 sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-21/arch-arm64
+Android NDK:   ABI mips sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-21/arch-mips
+Android NDK:   ABI mips64 sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-21/arch-mips64
+Android NDK:   ABI x86 sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-21/arch-x86
+Android NDK:   ABI x86_64 sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-21/arch-x86_64
+Android NDK: PLATFORM android-3 supports: arm
+Android NDK:   ABI arm sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-3/arch-arm
+Android NDK: PLATFORM android-4 supports: arm
+Android NDK:   ABI arm sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-4/arch-arm
+Android NDK: PLATFORM android-5 supports: arm
+Android NDK:   ABI arm sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-5/arch-arm
+Android NDK: PLATFORM android-8 supports: arm
+Android NDK:   ABI arm sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-8/arch-arm
+Android NDK: PLATFORM android-9 supports: arm mips x86
+Android NDK:   ABI arm sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-9/arch-arm
+Android NDK:   ABI mips sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-9/arch-mips
+Android NDK:   ABI x86 sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-9/arch-x86
+Android NDK: Found stable platform levels: 12 13 14 15 16 17 18 19 21 3 4 5 8 9
+Android NDK: Found max platform level: 21
+Android NDK:  This NDK supports the following target architectures and ABIS:
+Android NDK:    arm: armeabi armeabi-v7a armeabi-v7a-hard
+Android NDK:    arm64: arm64-v8a
+Android NDK:    mips: mips
+Android NDK:    mips64: mips64
+Android NDK:    x86: x86
+Android NDK:    x86_64: x86_64
+Android NDK:  This NDK supports the following toolchains and target ABIs:
+Android NDK:    aarch64-linux-android-4.9:  arm64-v8a
+Android NDK:    aarch64-linux-android-clang3.5:  arm64-v8a
+Android NDK:    aarch64-linux-android-clang3.6:  arm64-v8a
+Android NDK:    arm-linux-androideabi-4.8:  armeabi armeabi-v7a armeabi-v7a-hard
+Android NDK:    arm-linux-androideabi-4.9:  armeabi armeabi-v7a armeabi-v7a-hard
+Android NDK:    arm-linux-androideabi-clang3.5:  armeabi armeabi-v7a armeabi-v7a-hard
+Android NDK:    arm-linux-androideabi-clang3.6:  armeabi armeabi-v7a armeabi-v7a-hard
+Android NDK:    mips64el-linux-android-4.9:  mips64
+Android NDK:    mips64el-linux-android-clang3.5:  mips64
+Android NDK:    mips64el-linux-android-clang3.6:  mips64
+Android NDK:    mipsel-linux-android-4.8:  mips
+Android NDK:    mipsel-linux-android-4.9:  mips
+Android NDK:    mipsel-linux-android-clang3.5:  mips
+Android NDK:    mipsel-linux-android-clang3.6:  mips
+Android NDK:    x86-4.8:  x86
+Android NDK:    x86-4.9:  x86
+Android NDK:    x86-clang3.5:  x86
+Android NDK:    x86-clang3.6:  x86
+Android NDK:    x86_64-4.9:  x86_64
+Android NDK:    x86_64-clang3.5:  x86_64
+Android NDK:    x86_64-clang3.6:  x86_64
+Android NDK: Make no attempt to look for NDK_PROJECT_PATH.
+Android NDK: Ouput path for intermediate files: /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/obj
+Android NDK: Ouput path for generated library files: /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib
+Android NDK: Parsing /home/cobalt/Android/Sdk/ndk-bundle/build/core/default-application.mk
+Android NDK:   APP_PIE is false
+Android NDK:   Using build script /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/src/main/executable.mk
+Android NDK: Application 'local' forced debuggable through NDK_DEBUG
+Android NDK: Selecting debug optimization mode (app is debuggable)
+Android NDK: Adding import directory: /home/cobalt/Android/adt-bundle-linux-x86-20131030/android-ndk-r10d
+Android NDK: Adding import directory: /home/cobalt/Android/Sdk/ndk-bundle/sources
+Android NDK: Building application 'local' for ABI 'arm64-v8a'
+Android NDK:   Enabling -fPIE for TARGET_PLATFORM android-21
+Android NDK: Using target toolchain 'aarch64-linux-android-4.9' for 'arm64-v8a' ABI
+Android NDK: Looking for imported module with tag 'cxx-stl/system'
+Android NDK:   Probing /home/cobalt/Android/adt-bundle-linux-x86-20131030/android-ndk-r10d/cxx-stl/system/Android.mk
+Android NDK:   Probing /home/cobalt/Android/Sdk/ndk-bundle/sources/cxx-stl/system/Android.mk
+Android NDK:     Found in /home/cobalt/Android/Sdk/ndk-bundle/sources/cxx-stl/system
+Android NDK: [arm64-v8a] Modules to build: puzzles-prebuilt puzzlesgen-no-pie
+Android NDK: Building application 'local' for ABI 'x86_64'
+Android NDK:   Enabling -fPIE for TARGET_PLATFORM android-21
+Android NDK: Using target toolchain 'x86_64-4.9' for 'x86_64' ABI
+Android NDK: Looking for imported module with tag 'cxx-stl/system'
+Android NDK:   Probing /home/cobalt/Android/adt-bundle-linux-x86-20131030/android-ndk-r10d/cxx-stl/system/Android.mk
+Android NDK:   Probing /home/cobalt/Android/Sdk/ndk-bundle/sources/cxx-stl/system/Android.mk
+Android NDK:     Found in /home/cobalt/Android/Sdk/ndk-bundle/sources/cxx-stl/system
+Android NDK: [x86_64] Modules to build: puzzles-prebuilt puzzlesgen-no-pie
+Android NDK: Building application 'local' for ABI 'mips64'
+Android NDK:   Enabling -fPIE for TARGET_PLATFORM android-21
+Android NDK: Using target toolchain 'mips64el-linux-android-4.9' for 'mips64' ABI
+Android NDK: Looking for imported module with tag 'cxx-stl/system'
+Android NDK:   Probing /home/cobalt/Android/adt-bundle-linux-x86-20131030/android-ndk-r10d/cxx-stl/system/Android.mk
+Android NDK:   Probing /home/cobalt/Android/Sdk/ndk-bundle/sources/cxx-stl/system/Android.mk
+Android NDK:     Found in /home/cobalt/Android/Sdk/ndk-bundle/sources/cxx-stl/system
+Android NDK: [mips64] Modules to build: puzzles-prebuilt puzzlesgen-no-pie
+Android NDK: Building application 'local' for ABI 'armeabi-v7a'
+Android NDK: Using target toolchain 'arm-linux-androideabi-4.8' for 'armeabi-v7a' ABI
+Android NDK: Looking for imported module with tag 'cxx-stl/system'
+Android NDK:   Probing /home/cobalt/Android/adt-bundle-linux-x86-20131030/android-ndk-r10d/cxx-stl/system/Android.mk
+Android NDK:   Probing /home/cobalt/Android/Sdk/ndk-bundle/sources/cxx-stl/system/Android.mk
+Android NDK:     Found in /home/cobalt/Android/Sdk/ndk-bundle/sources/cxx-stl/system
+Android NDK: [armeabi-v7a] Modules to build: puzzles-prebuilt puzzlesgen-no-pie
+Android NDK: Building application 'local' for ABI 'armeabi'
+Android NDK: Using target toolchain 'arm-linux-androideabi-4.8' for 'armeabi' ABI
+Android NDK: Looking for imported module with tag 'cxx-stl/system'
+Android NDK:   Probing /home/cobalt/Android/adt-bundle-linux-x86-20131030/android-ndk-r10d/cxx-stl/system/Android.mk
+Android NDK:   Probing /home/cobalt/Android/Sdk/ndk-bundle/sources/cxx-stl/system/Android.mk
+Android NDK:     Found in /home/cobalt/Android/Sdk/ndk-bundle/sources/cxx-stl/system
+Android NDK: [armeabi] Modules to build: puzzles-prebuilt puzzlesgen-no-pie
+Android NDK: Building application 'local' for ABI 'x86'
+Android NDK: Using target toolchain 'x86-4.8' for 'x86' ABI
+Android NDK: Looking for imported module with tag 'cxx-stl/system'
+Android NDK:   Probing /home/cobalt/Android/adt-bundle-linux-x86-20131030/android-ndk-r10d/cxx-stl/system/Android.mk
+Android NDK:   Probing /home/cobalt/Android/Sdk/ndk-bundle/sources/cxx-stl/system/Android.mk
+Android NDK:     Found in /home/cobalt/Android/Sdk/ndk-bundle/sources/cxx-stl/system
+Android NDK: [x86] Modules to build: puzzles-prebuilt puzzlesgen-no-pie
+Android NDK: Building application 'local' for ABI 'mips'
+Android NDK: Using target toolchain 'mipsel-linux-android-4.8' for 'mips' ABI
+Android NDK: Looking for imported module with tag 'cxx-stl/system'
+Android NDK:   Probing /home/cobalt/Android/adt-bundle-linux-x86-20131030/android-ndk-r10d/cxx-stl/system/Android.mk
+Android NDK:   Probing /home/cobalt/Android/Sdk/ndk-bundle/sources/cxx-stl/system/Android.mk
+Android NDK:     Found in /home/cobalt/Android/Sdk/ndk-bundle/sources/cxx-stl/system
+Android NDK: [mips] Modules to build: puzzles-prebuilt puzzlesgen-no-pie
+[arm64-v8a] Gdbserver      : [aarch64-linux-android-4.9] /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/arm64-v8a/gdbserver
+[arm64-v8a] Gdbsetup       : /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/arm64-v8a/gdb.setup
+[x86_64] Gdbserver      : [x86_64-4.9] /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/x86_64/gdbserver
+[x86_64] Gdbsetup       : /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/x86_64/gdb.setup
+[mips64] Gdbserver      : [mips64el-linux-android-4.9] /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/mips64/gdbserver
+[mips64] Gdbsetup       : /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/mips64/gdb.setup
+[armeabi-v7a] Gdbserver      : [arm-linux-androideabi-4.8] /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/armeabi-v7a/gdbserver
+[armeabi-v7a] Gdbsetup       : /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/armeabi-v7a/gdb.setup
+[armeabi] Gdbserver      : [arm-linux-androideabi-4.8] /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/armeabi/gdbserver
+[armeabi] Gdbsetup       : /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/armeabi/gdb.setup
+[x86] Gdbserver      : [x86-4.8] /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/x86/gdbserver
+[x86] Gdbsetup       : /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/x86/gdb.setup
+[mips] Gdbserver      : [mipsel-linux-android-4.8] /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/mips/gdbserver
+[mips] Gdbsetup       : /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/mips/gdb.setup
+[arm64-v8a] Prebuilt       : libpuzzles.so <= /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/prebuilt/arm64-v8a/
+[arm64-v8a] Install        : libpuzzles.so => /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/arm64-v8a/libpuzzles.so
+[arm64-v8a] Compile        : puzzlesgen-no-pie <= android-gen.c
+[arm64-v8a] Executable     : puzzlesgen-no-pie
+[arm64-v8a] Install        : puzzlesgen-no-pie => /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/arm64-v8a/puzzlesgen-no-pie
+[x86_64] Prebuilt       : libpuzzles.so <= /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/prebuilt/x86_64/
+[x86_64] Install        : libpuzzles.so => /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/x86_64/libpuzzles.so
+[x86_64] Compile        : puzzlesgen-no-pie <= android-gen.c
+[x86_64] Executable     : puzzlesgen-no-pie
+[x86_64] Install        : puzzlesgen-no-pie => /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/x86_64/puzzlesgen-no-pie
+[mips64] Prebuilt       : libpuzzles.so <= /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/prebuilt/mips64/
+[mips64] Install        : libpuzzles.so => /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/mips64/libpuzzles.so
+[mips64] Compile        : puzzlesgen-no-pie <= android-gen.c
+[mips64] Executable     : puzzlesgen-no-pie
+[mips64] Install        : puzzlesgen-no-pie => /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/mips64/puzzlesgen-no-pie
+[armeabi-v7a] Prebuilt       : libpuzzles.so <= /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/prebuilt/armeabi-v7a/
+[armeabi-v7a] Install        : libpuzzles.so => /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/armeabi-v7a/libpuzzles.so
+[armeabi-v7a] Compile thumb  : puzzlesgen-no-pie <= android-gen.c
+[armeabi-v7a] Executable     : puzzlesgen-no-pie
+[armeabi-v7a] Install        : puzzlesgen-no-pie => /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/armeabi-v7a/puzzlesgen-no-pie
+[armeabi] Prebuilt       : libpuzzles.so <= /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/prebuilt/armeabi/
+[armeabi] Install        : libpuzzles.so => /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/armeabi/libpuzzles.so
+[armeabi] Compile thumb  : puzzlesgen-no-pie <= android-gen.c
+[armeabi] Executable     : puzzlesgen-no-pie
+[armeabi] Install        : puzzlesgen-no-pie => /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/armeabi/puzzlesgen-no-pie
+[x86] Prebuilt       : libpuzzles.so <= /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/prebuilt/x86/
+[x86] Install        : libpuzzles.so => /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/x86/libpuzzles.so
+[x86] Compile        : puzzlesgen-no-pie <= android-gen.c
+[x86] Executable     : puzzlesgen-no-pie
+[x86] Install        : puzzlesgen-no-pie => /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/x86/puzzlesgen-no-pie
+[mips] Prebuilt       : libpuzzles.so <= /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/prebuilt/mips/
+[mips] Install        : libpuzzles.so => /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/mips/libpuzzles.so
+[mips] Compile        : puzzlesgen-no-pie <= android-gen.c
+[mips] Executable     : puzzlesgen-no-pie
+[mips] Install        : puzzlesgen-no-pie => /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/mips/puzzlesgen-no-pie
+HOST_OS=linux
+HOST_ARCH=x86
+HOST_TAG=linux-x86 
+GNUMAKE=/home/cobalt/Android/Sdk/ndk-bundle/prebuilt/linux-x86/bin/make (NDK prebuilt)
+Android NDK: NDK installation path auto-detected: '/home/cobalt/Android/Sdk/ndk-bundle'
+Android NDK: GNU Make version 3.81 detected
+Android NDK: Host OS was auto-detected: linux
+Android NDK:  Host operating system detected: linux
+Android NDK: Host CPU was auto-detected: x86
+Android NDK: HOST_TAG set to linux-x86
+Android NDK: Host tools prebuilt directory: /home/cobalt/Android/Sdk/ndk-bundle/prebuilt/linux-x86/bin
+Android NDK: Host 'echo' tool: echo
+Android NDK: Host 'echo -n' tool: printf %s
+Android NDK: Host 'cmp' tool: cmp
+Android NDK: Host 'awk' tool: /home/cobalt/Android/Sdk/ndk-bundle/prebuilt/linux-x86/bin/awk
+Android NDK: Host 'awk' test returned: Pass
+Android NDK: Found platform root directory: /home/cobalt/Android/Sdk/ndk-bundle/platforms
+Android NDK: Found supported platforms: android-12 android-13 android-14 android-15 android-16 android-17 android-18 android-19 android-21 android-3 android-4 android-5 android-8 android-9
+Android NDK: PLATFORM android-12 supports: arm mips x86
+Android NDK:   ABI arm sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-12/arch-arm
+Android NDK:   ABI mips sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-12/arch-mips
+Android NDK:   ABI x86 sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-12/arch-x86
+Android NDK: PLATFORM android-13 supports: arm mips x86
+Android NDK:   ABI arm sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-13/arch-arm
+Android NDK:   ABI mips sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-13/arch-mips
+Android NDK:   ABI x86 sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-13/arch-x86
+Android NDK: PLATFORM android-14 supports: arm mips x86
+Android NDK:   ABI arm sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-14/arch-arm
+Android NDK:   ABI mips sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-14/arch-mips
+Android NDK:   ABI x86 sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-14/arch-x86
+Android NDK: PLATFORM android-15 supports: arm mips x86
+Android NDK:   ABI arm sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-15/arch-arm
+Android NDK:   ABI mips sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-15/arch-mips
+Android NDK:   ABI x86 sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-15/arch-x86
+Android NDK: PLATFORM android-16 supports: arm mips x86
+Android NDK:   ABI arm sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-16/arch-arm
+Android NDK:   ABI mips sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-16/arch-mips
+Android NDK:   ABI x86 sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-16/arch-x86
+Android NDK: PLATFORM android-17 supports: arm mips x86
+Android NDK:   ABI arm sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-17/arch-arm
+Android NDK:   ABI mips sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-17/arch-mips
+Android NDK:   ABI x86 sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-17/arch-x86
+Android NDK: PLATFORM android-18 supports: arm mips x86
+Android NDK:   ABI arm sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-18/arch-arm
+Android NDK:   ABI mips sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-18/arch-mips
+Android NDK:   ABI x86 sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-18/arch-x86
+Android NDK: PLATFORM android-19 supports: arm mips x86
+Android NDK:   ABI arm sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-19/arch-arm
+Android NDK:   ABI mips sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-19/arch-mips
+Android NDK:   ABI x86 sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-19/arch-x86
+Android NDK: PLATFORM android-21 supports: arm arm64 mips mips64 x86 x86_64
+Android NDK:   ABI arm sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-21/arch-arm
+Android NDK:   ABI arm64 sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-21/arch-arm64
+Android NDK:   ABI mips sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-21/arch-mips
+Android NDK:   ABI mips64 sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-21/arch-mips64
+Android NDK:   ABI x86 sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-21/arch-x86
+Android NDK:   ABI x86_64 sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-21/arch-x86_64
+Android NDK: PLATFORM android-3 supports: arm
+Android NDK:   ABI arm sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-3/arch-arm
+Android NDK: PLATFORM android-4 supports: arm
+Android NDK:   ABI arm sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-4/arch-arm
+Android NDK: PLATFORM android-5 supports: arm
+Android NDK:   ABI arm sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-5/arch-arm
+Android NDK: PLATFORM android-8 supports: arm
+Android NDK:   ABI arm sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-8/arch-arm
+Android NDK: PLATFORM android-9 supports: arm mips x86
+Android NDK:   ABI arm sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-9/arch-arm
+Android NDK:   ABI mips sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-9/arch-mips
+Android NDK:   ABI x86 sysroot is: /home/cobalt/Android/Sdk/ndk-bundle/platforms/android-9/arch-x86
+Android NDK: Found stable platform levels: 12 13 14 15 16 17 18 19 21 3 4 5 8 9
+Android NDK: Found max platform level: 21
+Android NDK:  This NDK supports the following target architectures and ABIS:
+Android NDK:    arm: armeabi armeabi-v7a armeabi-v7a-hard
+Android NDK:    arm64: arm64-v8a
+Android NDK:    mips: mips
+Android NDK:    mips64: mips64
+Android NDK:    x86: x86
+Android NDK:    x86_64: x86_64
+Android NDK:  This NDK supports the following toolchains and target ABIs:
+Android NDK:    aarch64-linux-android-4.9:  arm64-v8a
+Android NDK:    aarch64-linux-android-clang3.5:  arm64-v8a
+Android NDK:    aarch64-linux-android-clang3.6:  arm64-v8a
+Android NDK:    arm-linux-androideabi-4.8:  armeabi armeabi-v7a armeabi-v7a-hard
+Android NDK:    arm-linux-androideabi-4.9:  armeabi armeabi-v7a armeabi-v7a-hard
+Android NDK:    arm-linux-androideabi-clang3.5:  armeabi armeabi-v7a armeabi-v7a-hard
+Android NDK:    arm-linux-androideabi-clang3.6:  armeabi armeabi-v7a armeabi-v7a-hard
+Android NDK:    mips64el-linux-android-4.9:  mips64
+Android NDK:    mips64el-linux-android-clang3.5:  mips64
+Android NDK:    mips64el-linux-android-clang3.6:  mips64
+Android NDK:    mipsel-linux-android-4.8:  mips
+Android NDK:    mipsel-linux-android-4.9:  mips
+Android NDK:    mipsel-linux-android-clang3.5:  mips
+Android NDK:    mipsel-linux-android-clang3.6:  mips
+Android NDK:    x86-4.8:  x86
+Android NDK:    x86-4.9:  x86
+Android NDK:    x86-clang3.5:  x86
+Android NDK:    x86-clang3.6:  x86
+Android NDK:    x86_64-4.9:  x86_64
+Android NDK:    x86_64-clang3.5:  x86_64
+Android NDK:    x86_64-clang3.6:  x86_64
+Android NDK: Make no attempt to look for NDK_PROJECT_PATH.
+Android NDK: Ouput path for intermediate files: /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/obj
+Android NDK: Ouput path for generated library files: /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib
+Android NDK: Parsing /home/cobalt/Android/Sdk/ndk-bundle/build/core/default-application.mk
+Android NDK:   APP_PIE is true
+Android NDK:   Using build script /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/src/main/executable.mk
+Android NDK: Application 'local' forced debuggable through NDK_DEBUG
+Android NDK: Selecting debug optimization mode (app is debuggable)
+Android NDK: Adding import directory: /home/cobalt/Android/adt-bundle-linux-x86-20131030/android-ndk-r10d
+Android NDK: Adding import directory: /home/cobalt/Android/Sdk/ndk-bundle/sources
+Android NDK: Building application 'local' for ABI 'arm64-v8a'
+Android NDK:   Enabling -fPIE for TARGET_PLATFORM android-21
+Android NDK: Using target toolchain 'aarch64-linux-android-4.9' for 'arm64-v8a' ABI
+Android NDK: Looking for imported module with tag 'cxx-stl/system'
+Android NDK:   Probing /home/cobalt/Android/adt-bundle-linux-x86-20131030/android-ndk-r10d/cxx-stl/system/Android.mk
+Android NDK:   Probing /home/cobalt/Android/Sdk/ndk-bundle/sources/cxx-stl/system/Android.mk
+Android NDK:     Found in /home/cobalt/Android/Sdk/ndk-bundle/sources/cxx-stl/system
+Android NDK: [arm64-v8a] Modules to build: puzzles-prebuilt puzzlesgen-with-pie
+Android NDK: Building application 'local' for ABI 'x86_64'
+Android NDK:   Enabling -fPIE for TARGET_PLATFORM android-21
+Android NDK: Using target toolchain 'x86_64-4.9' for 'x86_64' ABI
+Android NDK: Looking for imported module with tag 'cxx-stl/system'
+Android NDK:   Probing /home/cobalt/Android/adt-bundle-linux-x86-20131030/android-ndk-r10d/cxx-stl/system/Android.mk
+Android NDK:   Probing /home/cobalt/Android/Sdk/ndk-bundle/sources/cxx-stl/system/Android.mk
+Android NDK:     Found in /home/cobalt/Android/Sdk/ndk-bundle/sources/cxx-stl/system
+Android NDK: [x86_64] Modules to build: puzzles-prebuilt puzzlesgen-with-pie
+Android NDK: Building application 'local' for ABI 'mips64'
+Android NDK:   Enabling -fPIE for TARGET_PLATFORM android-21
+Android NDK: Using target toolchain 'mips64el-linux-android-4.9' for 'mips64' ABI
+Android NDK: Looking for imported module with tag 'cxx-stl/system'
+Android NDK:   Probing /home/cobalt/Android/adt-bundle-linux-x86-20131030/android-ndk-r10d/cxx-stl/system/Android.mk
+Android NDK:   Probing /home/cobalt/Android/Sdk/ndk-bundle/sources/cxx-stl/system/Android.mk
+Android NDK:     Found in /home/cobalt/Android/Sdk/ndk-bundle/sources/cxx-stl/system
+Android NDK: [mips64] Modules to build: puzzles-prebuilt puzzlesgen-with-pie
+Android NDK: Building application 'local' for ABI 'armeabi-v7a'
+Android NDK:   Enabling -fPIE for TARGET_PLATFORM android-16
+Android NDK: Using target toolchain 'arm-linux-androideabi-4.8' for 'armeabi-v7a' ABI
+Android NDK: Looking for imported module with tag 'cxx-stl/system'
+Android NDK:   Probing /home/cobalt/Android/adt-bundle-linux-x86-20131030/android-ndk-r10d/cxx-stl/system/Android.mk
+Android NDK:   Probing /home/cobalt/Android/Sdk/ndk-bundle/sources/cxx-stl/system/Android.mk
+Android NDK:     Found in /home/cobalt/Android/Sdk/ndk-bundle/sources/cxx-stl/system
+Android NDK: [armeabi-v7a] Modules to build: puzzles-prebuilt puzzlesgen-with-pie
+Android NDK: Building application 'local' for ABI 'armeabi'
+Android NDK:   Enabling -fPIE for TARGET_PLATFORM android-16
+Android NDK: Using target toolchain 'arm-linux-androideabi-4.8' for 'armeabi' ABI
+Android NDK: Looking for imported module with tag 'cxx-stl/system'
+Android NDK:   Probing /home/cobalt/Android/adt-bundle-linux-x86-20131030/android-ndk-r10d/cxx-stl/system/Android.mk
+Android NDK:   Probing /home/cobalt/Android/Sdk/ndk-bundle/sources/cxx-stl/system/Android.mk
+Android NDK:     Found in /home/cobalt/Android/Sdk/ndk-bundle/sources/cxx-stl/system
+Android NDK: [armeabi] Modules to build: puzzles-prebuilt puzzlesgen-with-pie
+Android NDK: Building application 'local' for ABI 'x86'
+Android NDK:   Enabling -fPIE for TARGET_PLATFORM android-16
+Android NDK: Using target toolchain 'x86-4.8' for 'x86' ABI
+Android NDK: Looking for imported module with tag 'cxx-stl/system'
+Android NDK:   Probing /home/cobalt/Android/adt-bundle-linux-x86-20131030/android-ndk-r10d/cxx-stl/system/Android.mk
+Android NDK:   Probing /home/cobalt/Android/Sdk/ndk-bundle/sources/cxx-stl/system/Android.mk
+Android NDK:     Found in /home/cobalt/Android/Sdk/ndk-bundle/sources/cxx-stl/system
+Android NDK: [x86] Modules to build: puzzles-prebuilt puzzlesgen-with-pie
+Android NDK: Building application 'local' for ABI 'mips'
+Android NDK:   Enabling -fPIE for TARGET_PLATFORM android-16
+Android NDK: Using target toolchain 'mipsel-linux-android-4.8' for 'mips' ABI
+Android NDK: Looking for imported module with tag 'cxx-stl/system'
+Android NDK:   Probing /home/cobalt/Android/adt-bundle-linux-x86-20131030/android-ndk-r10d/cxx-stl/system/Android.mk
+Android NDK:   Probing /home/cobalt/Android/Sdk/ndk-bundle/sources/cxx-stl/system/Android.mk
+Android NDK:     Found in /home/cobalt/Android/Sdk/ndk-bundle/sources/cxx-stl/system
+Android NDK: [mips] Modules to build: puzzles-prebuilt puzzlesgen-with-pie
+[arm64-v8a] Gdbserver      : [aarch64-linux-android-4.9] /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/arm64-v8a/gdbserver
+[arm64-v8a] Gdbsetup       : /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/arm64-v8a/gdb.setup
+[x86_64] Gdbserver      : [x86_64-4.9] /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/x86_64/gdbserver
+[x86_64] Gdbsetup       : /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/x86_64/gdb.setup
+[mips64] Gdbserver      : [mips64el-linux-android-4.9] /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/mips64/gdbserver
+[mips64] Gdbsetup       : /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/mips64/gdb.setup
+[armeabi-v7a] Gdbserver      : [arm-linux-androideabi-4.8] /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/armeabi-v7a/gdbserver
+[armeabi-v7a] Gdbsetup       : /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/armeabi-v7a/gdb.setup
+[armeabi] Gdbserver      : [arm-linux-androideabi-4.8] /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/armeabi/gdbserver
+[armeabi] Gdbsetup       : /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/armeabi/gdb.setup
+[x86] Gdbserver      : [x86-4.8] /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/x86/gdbserver
+[x86] Gdbsetup       : /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/x86/gdb.setup
+[mips] Gdbserver      : [mipsel-linux-android-4.8] /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/mips/gdbserver
+[mips] Gdbsetup       : /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/mips/gdb.setup
+[arm64-v8a] Install        : libpuzzles.so => /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/arm64-v8a/libpuzzles.so
+[arm64-v8a] Compile        : puzzlesgen-with-pie <= android-gen.c
+[arm64-v8a] Executable     : puzzlesgen-with-pie
+[arm64-v8a] Install        : puzzlesgen-with-pie => /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/arm64-v8a/puzzlesgen-with-pie
+[x86_64] Install        : libpuzzles.so => /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/x86_64/libpuzzles.so
+[x86_64] Compile        : puzzlesgen-with-pie <= android-gen.c
+[x86_64] Executable     : puzzlesgen-with-pie
+[x86_64] Install        : puzzlesgen-with-pie => /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/x86_64/puzzlesgen-with-pie
+[mips64] Install        : libpuzzles.so => /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/mips64/libpuzzles.so
+[mips64] Compile        : puzzlesgen-with-pie <= android-gen.c
+[mips64] Executable     : puzzlesgen-with-pie
+[mips64] Install        : puzzlesgen-with-pie => /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/mips64/puzzlesgen-with-pie
+[armeabi-v7a] Install        : libpuzzles.so => /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/armeabi-v7a/libpuzzles.so
+[armeabi-v7a] Compile thumb  : puzzlesgen-with-pie <= android-gen.c
+[armeabi-v7a] Executable     : puzzlesgen-with-pie
+[armeabi-v7a] Install        : puzzlesgen-with-pie => /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/armeabi-v7a/puzzlesgen-with-pie
+[armeabi] Install        : libpuzzles.so => /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/armeabi/libpuzzles.so
+[armeabi] Compile thumb  : puzzlesgen-with-pie <= android-gen.c
+[armeabi] Executable     : puzzlesgen-with-pie
+[armeabi] Install        : puzzlesgen-with-pie => /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/armeabi/puzzlesgen-with-pie
+[x86] Install        : libpuzzles.so => /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/x86/libpuzzles.so
+[x86] Compile        : puzzlesgen-with-pie <= android-gen.c
+[x86] Executable     : puzzlesgen-with-pie
+[x86] Install        : puzzlesgen-with-pie => /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/x86/puzzlesgen-with-pie
+[mips] Install        : libpuzzles.so => /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/mips/libpuzzles.so
+[mips] Compile        : puzzlesgen-with-pie <= android-gen.c
+[mips] Executable     : puzzlesgen-with-pie
+[mips] Install        : puzzlesgen-with-pie => /home/cobalt/AndroidStudioProjects/sgtpuzzles/app/build/intermediates/ndk/debug/lib/mips/puzzlesgen-with-pie
+:app:compileDebugSources
+:app:preDexDebug
+:app:dexDebug
+:app:validateDebugSigning
+:app:packageDebug
+:app:zipalignDebug
+:app:assembleDebug
+:app:installDebug
+Installing APK 'app-debug.apk' on 'X330 - 4.4.4'
+Installed on 1 device.
+
+BUILD SUCCESSFUL
+
+Total time: 8 mins 7.412 secs
+```
+
+This is the README accompanying the source code to Simon Tatham's
+puzzle collection. The collection's web site is at
+<http://www.chiark.greenend.org.uk/~sgtatham/puzzles/>.
+
+If you've obtained the source code by downloading a .tar.gz archive
+from the Puzzles web site, you should find several Makefiles in the
+source code. However, if you've checked the source code out from the
+Puzzles Subversion repository, you won't find the Makefiles: they're
+automatically generated by `mkfiles.pl', so run that to create them.
+
+The Makefiles include:
+
+ - `Makefile.am', together with the static `configure.ac', is intended
+   as input to automake. Run `mkauto.sh' to turn these into a
+   configure script and Makefile.in, after which you can then run
+   `./configure' to create an actual Unix Makefile.
+
+ - `Makefile.vc' should work under MS Visual C++ on Windows.
+
+ - `Makefile.cyg' should work under Cygwin / MinGW. With appropriate
+   tweaks and setting of TOOLPATH, it should work for both compiling
+   on Windows and cross-compiling on Unix.
+
+ - `Makefile.osx' should work under Mac OS X, provided the Xcode
+   tools are installed. It builds a single monolithic OS X
+   application capable of running any of the puzzles, or even more
+   than one of them at a time.
+
+ - `Makefile.wce' should work under MS eMbedded Visual C++ on
+   Windows and the Pocket PC SDK; it builds Pocket PC binaries.
+
+Many of these Makefiles build a program called `nullgame' in
+addition to the actual game binaries. This program doesn't do
+anything; it's just a template for people to start from when adding
+a new game to the collection, and it's compiled every time to ensure
+that it _does_ compile and link successfully (because otherwise it
+wouldn't be much use as a template). Once it's built, you can run it
+if you really want to (but it's very boring), and then you should
+ignore it.
+
+DO NOT EDIT THE MAKEFILES DIRECTLY, if you plan to send any changes
+back to the maintainer. The makefiles are generated automatically by
+the Perl script `mkfiles.pl' from the file `Recipe' and the various
+.R files. If you need to change the makefiles as part of a patch,
+you should change Recipe, *.R, and/or mkfiles.pl.
+
+The manual is provided in Windows Help format for the Windows build;
+in text format for anyone who needs it; and in HTML for the Mac OS X
+application and for the web site. It is generated from a Halibut
+source file (puzzles.but), which is the preferred form for
+modification. To generate the manual in other formats, rebuild it,
+or learn about Halibut, visit the Halibut website at
+<http://www.chiark.greenend.org.uk/~sgtatham/halibut/>.
